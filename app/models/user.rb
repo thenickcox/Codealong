@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_many :user_skills
   has_many :skills, through: :user_skills
 
-  attr_accessible :bio, :email, :expertise, :name, :password_digest, :username
+  attr_accessible :bio, :email, :name, :password_digest, :username
 
   # Contact info
   attr_accessible :phone, :skype, :facebook, :twitter
