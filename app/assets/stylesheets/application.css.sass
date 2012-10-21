@@ -1,0 +1,52 @@
+// For responsive design: breakpoint variables
+$break-iphone-portrait: 480px 
+
+ 
+
+
+@import 'bootstrap-responsive'
+@import 'typography'
+
+h1.create
+  margin-left: 190px
+  @media screen and (max-width: $break-iphone-portrait)
+    text-align: center
+    margin-left: 0
+form#new_user
+  margin-bottom: 20px
+  div.input
+    margin: 18px 0
+    @media screen and (max-width: $break-iphone-portrait)
+      display: inline-block
+      margin-bottom: 0
+    label
+      float: left
+      width: 180px
+      text-align: right
+      margin-top: 7px
+      @media screen and (max-width: $break-iphone-portrait)
+        text-align: left
+        margin-bottom: 5px
+      &.optional
+        @media screen and (max-width: $break-iphone-portrait)
+          margin-left: 10px
+    input, textarea
+      border: 1px solid #aaa
+      padding: 5px 2px
+      margin-left: 10px
+      font-size: 15px
+      width: 320px
+      height: 25px
+      @include border-radius(3px)
+
+    textarea
+      height: 80px
+      margin-bottom: 40px
+    input
+      font-size: 19px
+  input[type=submit]
+    padding: 8px 25px
+    background: #ccc
+    margin-left: 190px
+    @media screen and (max-width: $break-iphone-portrait)
+      margin-left: 10px

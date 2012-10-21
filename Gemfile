@@ -6,6 +6,7 @@ gem 'psych'
 
 gem 'bootstrap-sass', '~> 2.0.4.0'
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -38,8 +39,8 @@ gem 'haml-rails', '= 0.3.4'
 
 gem 'simple_form'
 
-gem 'rd_searchlogic', :require => 'searchlogic', :git => 'git://github.com/railsdog/searchlogic.git'
-gem 'authlogic'
+#gem 'rd_searchlogic', :require => 'searchlogic', :git => 'git://github.com/railsdog/searchlogic.git'
+#gem 'authlogic'
 
 # All of thoughtbot's goodness
 gem "paperclip", "~> 3.0"
@@ -55,6 +56,9 @@ end
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
+
+# For mailchimp
+gem 'gibbon'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
