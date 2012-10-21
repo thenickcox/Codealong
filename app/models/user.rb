@@ -4,7 +4,11 @@ class User < ActiveRecord::Base
   has_many :skills, through: :user_skills
 
   attr_accessible :bio, :email, :expertise, :name, :password_digest, :username
+
+  # Contact info
+  attr_accessible :phone, :skype, :facebook, :twitter
+  # Location
+  attr_accessible :address1, :address2, :city, :state_province, :zip, :country
   
   validates_presence_of :email, :name, :password_digest, :username
-
 end
