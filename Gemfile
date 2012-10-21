@@ -38,6 +38,7 @@ gem 'hpricot'
 gem 'haml-rails', '= 0.3.4'
 
 gem 'simple_form'
+gem 'country_select'
 
 #gem 'rd_searchlogic', :require => 'searchlogic', :git => 'git://github.com/railsdog/searchlogic.git'
 #gem 'authlogic'

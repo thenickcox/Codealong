@@ -1,7 +1,9 @@
-%h1 Editing user
+%h1.create-add Add More Info
+%h3 Thanks for registering!
+%p.create-add-p Adding more info to your profile helps us create better and more meaningful matches. Optionally, take a moment to fill out these remaining fields that will help us pair you with the best possible match for your needs. 
 
-= render 'form'
+= render 'form_full'
 
-= link_to 'Show', @user
-\|
-= link_to 'Back', users_path
+/ = link_to 'Show', @user
+/ \|
+/ = link_to 'Back', users_path

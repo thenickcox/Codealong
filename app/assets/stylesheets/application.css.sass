@@ -101,16 +101,18 @@ body
 
 // Create account page
 
-.container h1.create
+.container h1.create-add
   margin-left: 187px
   text-align: left
   font-family: 'museo-slab', Georgia, serif
   color: $dark-blue
-.create-p
+h3
+  margin-left: 187px
+.create-add-p
   width: 350px
   line-height: 1.4em
   margin: 1em 0 1em 187px
-form#new_user
+form#new_user, form.edit_user
   margin-bottom: 20px
   .avatar
     display: inline-block
@@ -140,7 +142,10 @@ form#new_user
       font-size: 15px
       width: 320px
       height: 25px
+      font-family: 'museo-sans', 'Helvetica Neue', Helvetica, sans-serif
       @include border-radius(3px)
+    select
+      margin-left: 10px
 
     textarea
       height: 80px

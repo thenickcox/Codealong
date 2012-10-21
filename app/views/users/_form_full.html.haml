@@ -1,0 +1,35 @@
+= simple_form_for @user do |f|
+  -if @user.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
+  = f.input :name
+  .avatar
+    %label.photo-upload Upload a photo
+    = f.file_field :avatar 
+  = f.input :username
+  = f.input :email
+  = f.input :user_type, :collection => ['Educator', 'Technology Professional'], :prompt => true
+  = f.input :bio, :as => :text
+
+  %h3 Contact Info
+  = f.input :address1, :label => 'Address Line 1'
+  = f.input :address2, :label => 'Address Line 2'
+  = f.input :city
+  = f.input :state_province, :collection =>  ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY' ]
+  = f.input :zip 
+
+  %h3 Social
+  = f.input :phone
+  = f.input :skype
+  = f.input :facebook
+  = f.input :twitter
+
+
+
+  
+  .actions
+    = f.submit 'Update Info'
