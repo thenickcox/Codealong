@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20121021080931) do
+=======
+ActiveRecord::Schema.define(:version => 20121021080616) do
+>>>>>>> Paperclip first try
 
   create_table "skills", :force => true do |t|
     t.string   "name"
@@ -35,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20121021080931) do
     t.text     "bio"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+<<<<<<< HEAD
     t.string   "company"
     t.string   "industry"
     t.integer  "years_of_experience"
@@ -49,6 +54,12 @@ ActiveRecord::Schema.define(:version => 20121021080931) do
     t.string   "zip"
     t.string   "country"
     t.string   "user_type"
+=======
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+>>>>>>> Paperclip first try
   end
 
 end

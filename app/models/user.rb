@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :user_skills
   has_many :skills, through: :user_skills
 
+<<<<<<< HEAD
   attr_accessible :bio, :email, :name, :password_digest, :username, :user_type
 
   # Contact info
@@ -17,4 +18,12 @@ class User < ActiveRecord::Base
       :in => %w{ developer teacher },
       :message => "%{ value } is not a valid user type"
     }
+=======
+  attr_accessible :bio, :email, :expertise, :name, :password_digest, :username, :avatar
+  
+  validates_presence_of :email, :name, :password_digest, :username
+
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+
+>>>>>>> Paperclip first try
 end

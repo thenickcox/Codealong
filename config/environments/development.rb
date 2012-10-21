@@ -31,6 +31,8 @@ Codealong::Application.configure do
     :user_name => ENV["codealong"],
     :password  => ENV["089a38cd-4d22-4a24-bda4-c3d5c567568f"]
   }
+  
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

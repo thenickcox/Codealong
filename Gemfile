@@ -42,6 +42,7 @@ gem 'simple_form'
 #gem 'rd_searchlogic', :require => 'searchlogic', :git => 'git://github.com/railsdog/searchlogic.git'
 #gem 'authlogic'
 
+
 # All of thoughtbot's goodness
 gem "paperclip", "~> 3.0"
 gem "bourbon"
