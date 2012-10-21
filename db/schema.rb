@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121021080527) do
+ActiveRecord::Schema.define(:version => 20121021080931) do
 
   create_table "skills", :force => true do |t|
     t.string   "name"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20121021080527) do
     t.string   "state_province"
     t.string   "zip"
     t.string   "country"
+    t.string   "user_type"
   end
 
 end

@@ -3,12 +3,18 @@ class User < ActiveRecord::Base
   has_many :user_skills
   has_many :skills, through: :user_skills
 
-  attr_accessible :bio, :email, :name, :password_digest, :username
+  attr_accessible :bio, :email, :name, :password_digest, :username, :user_type
 
   # Contact info
   attr_accessible :phone, :skype, :facebook, :twitter
   # Location
   attr_accessible :address1, :address2, :city, :state_province, :zip, :country
-  
-  validates_presence_of :email, :name, :password_digest, :username
+
+  # Validations
+  validates_presence_of :email, :name, :password_digest, :username, :user_type
+  validates :user_type, :inclusion =>
+    {
+      :in => %w{ developer teacher },
+      :message => "%{ value } is not a valid user type"
+    }
 end
