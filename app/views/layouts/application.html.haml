@@ -11,7 +11,13 @@
         <script type="text/javascript" src="//use.typekit.net/xwh1coo.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   %body
-    .container-fluid
+    .container
+
+
+
+
+
+    
       .navbar
         .navbar-inner
           .logo
@@ -19,7 +25,7 @@
           %ul.nav
             %li
               %a
-              = link_to "libary", "/"
+              = link_to "library", "/"
             %li
               %a
               = link_to "sign up", "/"
@@ -27,3 +33,5 @@
               %a
               = link_to "login", "/"
       = yield
+
+  = render "shared/google_analytics"
