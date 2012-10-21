@@ -1,5 +1,3 @@
-// For responsive design: breakpoint variables
-$break-iphone-portrait: 480px 
 
 // Colors
 $dark-blue: #20718a
@@ -11,6 +9,7 @@ $light-blue: #2fb6df
 
 body
   background: image_url('light_wool.png') top left repeat
+  color: #444
 
 .container
   padding: 20px
@@ -20,9 +19,9 @@ body
   background: #fff
   .logo
     a
-      background: image_url('codealong-logo.png')
+      background: image_url('codealong-logo.png') 2px 4px no-repeat
       width: 147px
-      height: 30px
+      height: 37px
       float: left
       text-indent: -9999px
   ul.nav
@@ -102,11 +101,15 @@ body
 
 // Create account page
 
-h1.create
-  margin-left: 190px
-  text-align: center
-  margin-left: 0
-  font-family: 'museo-salb'
+.container h1.create
+  margin-left: 187px
+  text-align: left
+  font-family: 'museo-slab', Georgia, serif
+  color: $dark-blue
+.create-p
+  width: 350px
+  line-height: 1.4em
+  margin: 1em 0 1em 187px
 form#new_user
   margin-bottom: 20px
   div.input
@@ -114,10 +117,13 @@ form#new_user
     label
       float: left
       width: 180px
-      text-align: right
+      text-align: right !important
       margin-top: 7px
       text-align: left
       margin-bottom: 5px
+    abbr[title=required]
+      border: none
+      color: #d0366e
     input, textarea
       border: 1px solid #aaa
       padding: 5px 2px
