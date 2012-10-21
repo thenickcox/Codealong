@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Skill do
-  pending "add some examples to (or delete) #{__FILE__}"
+  # pending "add some examples to (or delete) #{__FILE__}"
 
   describe "callbacks" do
     describe "before_save" do
@@ -10,7 +10,7 @@ describe Skill do
         skill.name = "  A Skill "
         skill.save
 
-        skill.normalized_name.should equal "a skill"
+        skill.normalized_name.should eq "a skill"
       end
     end
   end
