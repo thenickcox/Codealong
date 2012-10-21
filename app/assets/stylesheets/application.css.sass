@@ -1,11 +1,80 @@
 // For responsive design: breakpoint variables
 $break-iphone-portrait: 480px 
 
- 
+// Colors
+$dark-blue: #20718a
+$light-blue: #2fb6df
 
 
-@import 'bootstrap-responsive'
+@import 'bootstrap'
 @import 'typography'
+
+
+.navbar-inner
+  background: #fff
+  .logo
+    a
+      background: image_url('codealong-logo.png')
+      width: 147px
+      height: 30px
+      float: left
+      text-indent: -9999px
+  ul.nav
+    float: right
+    position: relative
+    bottom: 20px
+    li
+      a
+        color: $dark-blue
+
+.hero-unit
+  background: image_url('world_background.png')
+  display: inline-block
+  margin-bottom: 0
+  .copy
+    width: 40%
+    float: left
+    h1
+      color: $dark-blue
+      font-family: 'museo slab', Georgia, serif
+      font-size: 3em
+    h2
+      font-weight: 300
+      margin-bottom: 20px
+    p.btn
+      a
+        color: #fff
+        &:hover
+          text-decoration: none
+  .hero-right
+    float: right
+    img
+      width: 90%
+      @include box-shadow(3px 3px 5px #666)
+
+.looking-for
+  display: inline-block
+  width: 100%
+  text-align: center
+  h1
+    font-family: 'museo slab', Georgia, serif
+    color: $light-blue
+    text-align: center
+    font-size: 3em
+    margin: 0.8em 0
+
+  .site-role-module
+    float: left
+    width: 28%
+    margin-right: 2%
+    padding: 20px 15px
+    border: 1px solid #ccc
+    text-align: left
+    &:last-child
+      margin-right: 0
+
+
+// Create account page
 
 h1.create
   margin-left: 190px
@@ -50,3 +119,9 @@ form#new_user
     margin-left: 190px
     @media screen and (max-width: $break-iphone-portrait)
       margin-left: 10px
+
+// Footer
+
+.footer
+  text-align: center
+  
