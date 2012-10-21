@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121021052643) do
+ActiveRecord::Schema.define(:version => 20121021073129) do
 
   create_table "skills", :force => true do |t|
     t.string   "name"
@@ -34,8 +34,21 @@ ActiveRecord::Schema.define(:version => 20121021052643) do
     t.string   "password_digest"
     t.string   "expertise"
     t.text     "bio"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "company"
+    t.string   "industry"
+    t.integer  "years_of_experience"
+    t.string   "phone"
+    t.string   "skype"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state_province"
+    t.string   "zip"
+    t.string   "country"
   end
 
 end
